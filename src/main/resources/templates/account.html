@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org/">
+<head>
+    <meta charset="UTF-8">
+    <title>Your Account</title>
+</head>
+<body>
+<p th:text="'ID: ' + ${user.getId()}"></p>
+<p th:text="'Username: ' + ${user.getUserName()}"></p>
+<p th:text="'Password Hash: ' + ${user.getPasswordHash()}"></p>
+</body>
+</html>
