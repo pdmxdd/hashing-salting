@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org/">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+</head>
+<body>
+<div th:replace="fragments/menu :: login-menu"></div>
+<h2>Login:</h2>
+<div th:if="${error}">
+    <p style="color:red" th:text="${error}"></p>
+</div>
+<form method="POST" action="/login">
+    <label>username: <input type="text" id="username" name="username"></label><br />
+    <label>password: <input type="password" id="password" name="password"></label><br />
+    <input type="submit" value="Login">
+</form>
+</body>
+</html>
